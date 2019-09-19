@@ -118,7 +118,7 @@ namespace WindowsFormsApp1
             
             var listSuppliers = (from x in dbContext.Suppliers select x).ToList();
 
-
+            //selects the product suppliers using an sql query and joining three tables
             var productSuppliers = (from prod in dbContext.Products
                                    join prodSup in dbContext.Products_Suppliers
                                    on prod.ProductId equals prodSup.ProductId
